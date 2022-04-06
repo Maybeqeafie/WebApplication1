@@ -1,0 +1,14 @@
+﻿
+@model WebApplication1.Models.LoginModel
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Вы получили доступ к сайту.</p>
+
+<p>@Html.LabelFor(m => m.Name) : @Html.DisplayFor(m => m.Name)</p>
+<p>@Html.LabelFor(m => m.Password) : @Html.DisplayFor(m => m.Password)</p>
+
+<p><a href="https://localhost:44384/Main/index" class="btn btn-primary btn-lg">Выйти &raquo;</a></p>
