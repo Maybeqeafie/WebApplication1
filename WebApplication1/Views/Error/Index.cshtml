@@ -1,0 +1,20 @@
+﻿@model WebApplication1.Models.Error
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div >
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td> <input type="text" name="Message" class="form-control" /> </td>
+            </tr>
+            <tr>
+                <th><input type="submit" name="Operation" value="Submit" class="btn btn-primary" /> </th>
+            </tr>
+        </table>
+    }
+</div>

@@ -28,14 +28,12 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult Input()
         {
             return View();
         }
 
         [HttpPost]
-        [Authorize]
         public ActionResult Input(Input model)
         {
             return View(model);

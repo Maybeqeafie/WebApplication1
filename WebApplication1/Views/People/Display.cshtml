@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebApplication1.Models.People>
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reward)
+            <br>
+        </td>
+
+    </tr>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

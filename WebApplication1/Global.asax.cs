@@ -26,6 +26,14 @@ namespace WebApplication1
             ServiceCollection services = new ServiceCollection();   
             services.AddHttpContextAccessor();
         }
-
+        protected void Application_Error(Object sender, EventArgs e)
+        {
+            HttpException ex = (HttpException)Server.GetLastError();
+            int httpCode = ex.GetHttpCode();
+            if (httpCode == 404)
+            {
+                Response.Redirect("/Error/About");
+            }
+        }
     }
 }

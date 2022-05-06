@@ -518,9 +518,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CalculatorController.cs" />
     <Compile Include="Controllers\CompaniesController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\PartyController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -544,11 +548,35 @@
     <Compile Include="Migrations\202204061103593_AddInsertData.designer.cs">
       <DependentUpon>202204061103593_AddInsertData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202204192033364_AddPeople.cs" />
+    <Compile Include="Migrations\202204192033364_AddPeople.designer.cs">
+      <DependentUpon>202204192033364_AddPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204201847045_AddParty.cs" />
+    <Compile Include="Migrations\202204201847045_AddParty.designer.cs">
+      <DependentUpon>202204201847045_AddParty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204202123313_AddParty2.cs" />
+    <Compile Include="Migrations\202204202123313_AddParty2.designer.cs">
+      <DependentUpon>202204202123313_AddParty2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204230859105_AddPhoneNumber.cs" />
+    <Compile Include="Migrations\202204230859105_AddPhoneNumber.designer.cs">
+      <DependentUpon>202204230859105_AddPhoneNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204230951070_AddText.cs" />
+    <Compile Include="Migrations\202204230951070_AddText.designer.cs">
+      <DependentUpon>202204230951070_AddText.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Calculator.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\Input.cs" />
     <Compile Include="Models\Models.cs" />
+    <Compile Include="Models\Party.cs" />
+    <Compile Include="Models\People.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -591,7 +619,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Main\Input.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Customers\Create.cshtml" />
     <Content Include="Views\Customers\Delete.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
@@ -602,6 +629,19 @@
     <Content Include="Views\Companies\Details.cshtml" />
     <Content Include="Views\Companies\Edit.cshtml" />
     <Content Include="Views\Companies\Index.cshtml" />
+    <Content Include="Views\Calculator\Index.cshtml" />
+    <Content Include="Views\People\Create.cshtml" />
+    <Content Include="Views\People\Delete.cshtml" />
+    <Content Include="Views\People\Details.cshtml" />
+    <Content Include="Views\People\Edit.cshtml" />
+    <Content Include="Views\People\Index.cshtml" />
+    <Content Include="Views\People\Display.cshtml" />
+    <Content Include="Views\Party\Index.cshtml" />
+    <Content Include="Views\Party\Form.cshtml" />
+    <Content Include="Views\Party\Display.cshtml" />
+    <Content Include="Views\Party\ThankYou.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Error\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -634,6 +674,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204061103593_AddInsertData.resx">
       <DependentUpon>202204061103593_AddInsertData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204192033364_AddPeople.resx">
+      <DependentUpon>202204192033364_AddPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204201847045_AddParty.resx">
+      <DependentUpon>202204201847045_AddParty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204202123313_AddParty2.resx">
+      <DependentUpon>202204202123313_AddParty2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204230859105_AddPhoneNumber.resx">
+      <DependentUpon>202204230859105_AddPhoneNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204230951070_AddText.resx">
+      <DependentUpon>202204230951070_AddText.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
