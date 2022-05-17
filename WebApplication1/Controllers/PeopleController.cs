@@ -15,16 +15,7 @@ namespace WebApplication1.Controllers
     {
         private UserContext db = new UserContext();
 
-        private IMemoryCache cache;
 
-        //public PeopleController(IMemoryCache memoryCache)
-        //{
-        //    cache = memoryCache;
-        //}
-        public static class CacheKeys
-        {
-            public static string Entry => "Entry";
-        }
 
         // GET: People
         public ActionResult Index()
@@ -34,15 +25,7 @@ namespace WebApplication1.Controllers
 
         public ActionResult Display()
         {
-            //List<People> peoples = db.Peoples.ToList();
-            //if (!cache.TryGetValue(CacheKeys.Entry, out peoples))
-            //{
-            //    cache.Set(peoples, new MemoryCacheEntryOptions
-            //    {
-            //        AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(5)
-            //    });
-            //}
-            //List<People> cachePeoples = cache.Get<List<People>>(CacheKeys.Entry);
+            
             return View(db.Peoples.ToList());
         }
         // GET: People/Details/5

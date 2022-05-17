@@ -38,5 +38,15 @@ namespace WebApplication1.Controllers
         {
             return View(model);
         }
+
+        public ActionResult View1()
+        {
+            return View();
+        }
+
+        public ActionResult View2()
+        {
+            return View();
+        }
     }
 }
