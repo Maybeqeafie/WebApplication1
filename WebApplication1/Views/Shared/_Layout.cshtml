@@ -9,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-   <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,8 +24,12 @@
                 @Html.ActionLink("Calculator", "Index", "Calculator", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("People", "Index", "People", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Party", "Index", "Party", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Error", "Index", "Error", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Cache", "Index", "Cache", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Master1", "View1", "Main", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Master2", "View2", "Main", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-        
+
         </div>
     </div>
 
@@ -35,6 +39,28 @@
         <footer>
             <p>&copy; Algeev</p>
         </footer>
+    </div>
+
+    <div>
+        @if (IsSectionDefined("placeholder_1"))
+        {
+            @RenderSection("placeholder_1")
+        }
+        else
+        {
+            <span>Default content</span>
+        }
+    </div>
+
+    <div>
+        @if (IsSectionDefined("placeholder_2"))
+        {
+            @RenderSection("placeholder_2")
+        }
+        else
+        {
+            <span>Default content</span>
+        }
     </div>
 
     @Scripts.Render("~/bundles/jquery")
